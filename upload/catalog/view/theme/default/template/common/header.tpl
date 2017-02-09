@@ -20,7 +20,11 @@
     <meta name="keywords" content="<?php echo $keywords; ?>"/>
     <?php } ?>
     <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="catalog/view/javascript/jquery/jquery.cookieBar.js" type="text/javascript"></script>
+    <script src="catalog/view/javascript/jquery/jquery.cookieBar.min.js" type="text/javascript"></script>
     <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link href="catalog/view/css/cookieBar.css" rel="stylesheet" type="text/css"/>
+    <link href="catalog/view/css/cookieBar.min.css" rel="stylesheet" type="text/css"/>
     <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css"/>
@@ -48,6 +52,18 @@
         <?php echo $language; ?>
 
         <div id="top-links" class="nav pull-right">
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.cookie-message').cookieBar();
+                });
+            </script>
+
+            <div class="ui-widget">
+                <div class="cookie-message ui-widget-header blue">
+                    <p>Acest site foloseşte cookies! Continuarea navigării implică acceptarea lor.</p>
+                </div>
+            </div>
 
             <ul class="list-inline">
                 <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span
